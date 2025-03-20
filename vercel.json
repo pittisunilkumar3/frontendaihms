@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "VITE_ULTRAVOX_API_KEY": "@ultravox_api_key",
+    "VITE_DAILY_API_KEY": "@daily_api_key",
+    "VITE_CARTESIA_API_KEY": "@cartesia_api_key"
+  }
+}
